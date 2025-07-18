@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/components/buttons.dart';
+//import 'package:flutter_application/components/buttons.dart';
 import 'package:flutter_application/core/app_colors.dart';
 import 'package:flutter_application/screens/imc_home.dart';
 
@@ -20,7 +20,8 @@ class MainApp extends StatelessWidget {
           title: Text("IMC Calculator"),
         ),
         backgroundColor: AppColors.background,
-        body: Column(children: [ImcHomeScreen(), ButtonsDart()]),
+        body: Column(children: [ImcHomeScreen(), 
+        ]),
       ),
     );
   }
