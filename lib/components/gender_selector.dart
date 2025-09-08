@@ -24,7 +24,8 @@ class _GenderSelectorState extends State<GenderSelector> {
             setState(() {
               selectedGender = "H";
             });
-          }),
+          },
+        ),
         //mujer
         GenderBox(
           imagePath: "assets/images/female.png",
@@ -34,7 +35,8 @@ class _GenderSelectorState extends State<GenderSelector> {
             setState(() {
               selectedGender = "M";
             });
-          }),
+          },
+        ),
       ],
     );
   }

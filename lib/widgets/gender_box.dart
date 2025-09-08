@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/core/app_colors.dart';
+import 'package:flutter_application/core/text_styles.dart';
 
 class GenderBox extends StatelessWidget {
   final String imagePath;
@@ -35,7 +36,7 @@ class GenderBox extends StatelessWidget {
                   children: [
                     Image.asset(imagePath, height: 100),
                     SizedBox(height: 12),
-                    Text(texto, style: TextStyle(fontSize: 16, color: Colors.white)),
+                    Text(texto, style: TextStyles.bodyText),
                   ],
                 ),
               ),
