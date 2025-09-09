@@ -13,31 +13,34 @@ class _GenderSelectorState extends State<GenderSelector> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        //hombre
-        GenderBox(
-          imagePath: "assets/images/male.png",
-          texto: "Hombre",
-          isSelected: selectedGender == "H",
-          onTap: () {
-            setState(() {
-              selectedGender = "H";
-            });
-          },
-        ),
-        //mujer
-        GenderBox(
-          imagePath: "assets/images/female.png",
-          texto: "Mujer",
-          isSelected: selectedGender == "M",
-          onTap: () {
-            setState(() {
-              selectedGender = "M";
-            });
-          },
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 8, top: 12, bottom: 12, right: 8),
+      child: Row(
+        children: [
+          //hombre
+          GenderBox(
+            imagePath: "assets/images/male.png",
+            texto: "Hombre",
+            isSelected: selectedGender == "H",
+            onTap: () {
+              setState(() {
+                selectedGender = "H";
+              });
+            },
+          ),
+          //mujer
+          GenderBox(
+            imagePath: "assets/images/female.png",
+            texto: "Mujer",
+            isSelected: selectedGender == "M",
+            onTap: () {
+              setState(() {
+                selectedGender = "M";
+              });
+            },
+          ),
+        ],
+      ),
     );
   }
 }

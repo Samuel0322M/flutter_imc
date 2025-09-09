@@ -14,9 +14,8 @@ class _HeightSelectorState extends State<HeightSelector> {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        child: Padding(
-          padding: EdgeInsets.all(16),
+    return Padding(
+          padding: EdgeInsets.only(left: 16, right: 16),
           child: Container(
             decoration: BoxDecoration(
               color: AppColors.backgroundComponent,
@@ -38,12 +37,13 @@ class _HeightSelectorState extends State<HeightSelector> {
                     },
                     min: 120,
                     max: 260,
+                    divisions: 140,
+                    activeColor: AppColors.primary,
                   ),
                 ],
               ),
             ),
           ),
-        ),
-      );
+        );
   }
 }

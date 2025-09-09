@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/components/gender_selector.dart';
 import 'package:flutter_application/components/height_select.dart';
+import 'package:flutter_application/components/number_selector.dart';
 
 
 //vamos a tener una clase que se extiende del stateful widget
@@ -18,8 +19,8 @@ class _ImcHomeScreenState extends State<ImcHomeScreen> {
     return Column(
       children: [
         GenderSelector(),
-        SizedBox(height: 8),
         HeightSelector(),
+        NumberSelector()
       ],
     );
   }
