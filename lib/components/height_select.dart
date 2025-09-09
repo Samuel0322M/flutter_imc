@@ -3,14 +3,16 @@ import 'package:flutter_application/core/app_colors.dart';
 import 'package:flutter_application/core/text_styles.dart';
 
 class HeightSelector extends StatefulWidget {
-  const HeightSelector({super.key});
+  final ValueChanged height;
+  final double selectedHeight;
+  const HeightSelector({super.key, required this.height, required this.selectedHeight});
 
   @override
   State<HeightSelector> createState() => _HeightSelectorState();
 }
 
 class _HeightSelectorState extends State<HeightSelector> {
-  double height = 170;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +29,10 @@ class _HeightSelectorState extends State<HeightSelector> {
                 children: [
                   Text("ALTURA", style: TextStyles.bodyText),
                   SizedBox(height: 8),
-                  Text("${height.toStringAsFixed(0)} cm", style: TextStyles.titleText),
+                  Text("${widget.selectedHeight.toStringAsFixed(0)} cm", style: TextStyles.titleText),
                   Slider(
-                    value: height,
-                    onChanged: (value) {
-                      setState(() {
-                        height = value;
-                      });
-                    },
+                    value: widget.selectedHeight,
+                    onChanged: widget.height,
                     min: 120,
                     max: 260,
                     divisions: 140,
